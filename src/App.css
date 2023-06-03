@@ -9,6 +9,13 @@
   background-color:lightgray ;
   color:black;
 }
+.profile{
+  background-image: url("");
+  background-position: center;
+  border-radius: 50%;
+  border:2px solid  rgb(148, 146, 146);
+  height:10vh;
+}
 .form{
   display:flex;
   flex-direction: column;

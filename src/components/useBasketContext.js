@@ -2,8 +2,8 @@ import React from 'react'
 import { BasketContext } from './BasketContext'
 
 export default function useBasketContext() {
+    
+    const context = React.useContext(BasketContext)
 
-    const constext = React.useContext(BasketContext)
-
-    return constext
+    return context
 }

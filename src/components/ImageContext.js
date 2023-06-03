@@ -2,7 +2,6 @@ import React,{createContext,useState} from 'react'
 
 const ImageContext=createContext();
 
-
 const ImageProvider=({children})=> {
     const [image, setImage] = useState(null);
      return (
@@ -12,4 +11,3 @@ const ImageProvider=({children})=> {
     );
   }
   export  {ImageContext, ImageProvider };
-  

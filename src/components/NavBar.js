@@ -1,7 +1,6 @@
 import { NavLink } from 'react-router-dom'
-import React, { useState, useEffect,useContext } from 'react';
+import React, {useContext } from 'react';
 import { ImageContext } from './ImageContext';
-import './style.css'
 import '../App.css'
 import { Button} from '@material-ui/core';
 export default function NavBar() {
