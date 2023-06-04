@@ -26,13 +26,8 @@ export async function updatePost(postToUpdate) {
 }
 
 export function addPost(newPost) {
-    // אם אני מעבירה נתונים לקריאת שרת בבודי חייבים להגדיר את הסוג של הנתונים המועברים בקונטנט טייפ 
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
-
-
-    // כשמעבירים בבודי אביקט של גייסון חייבים להמיר אותו לסטרינג ע"י JSON.stringify
-    // header הגדרות על הסוג הנתונים בקריאה ואיבטוח של הנתונים
     const requestOptions = {
         method: 'POST',
         headers: myHeaders,
@@ -51,9 +46,9 @@ export function addClient(email, password) {
     const data = JSON.stringify({ email, password }); // convert the data to a JSON string
     const headers = { 'Content-Type': 'application/json' };
   
-    return fetch(url, { method: 'POST', body: data, headers }) // pass in the data and headers as options for the POST call
+    return fetch(url, { method: 'POST', body: data, headers })
       .then((res) => {
-        if (!res.ok) { // check if the response was not successful
+        if (!res.ok) {
           throw new Error('Network response was not ok');
         }
         return res.json(); // return the response body data as a JSON object

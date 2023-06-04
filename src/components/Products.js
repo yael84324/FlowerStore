@@ -36,9 +36,9 @@ export default function Products()
         deletePosts(obj._id)
         setProduct(products.filter((p)=>p._id!=obj._id))
     }
-    
+
     return <form className="form"> 
-        <TextField value={search} onChange={handleChange} name='search' label="מה אתה רוצה לחפש?"/><br /> 
+        <TextField value={search} onChange={handleChange} name='search' label="What to search?"/><br /> 
         <Button onClick={searching}>search</Button>
         <h3>The most pampering</h3>
         <div className="product-list" >
