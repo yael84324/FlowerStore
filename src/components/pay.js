@@ -1,5 +1,6 @@
 import {Button, TextField } from '@material-ui/core';
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'
 import useBasketContext from './useBasketContext';
 import order from "../images/ordersendding.gif"
 function Pay() {
@@ -8,6 +9,7 @@ function Pay() {
   const [cvv, setCvv] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const {setSumBasket,setBasketProducts,setCountBasket,sumBasket} = useBasketContext()
+  const navigate = useNavigate()
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -31,7 +33,10 @@ function Pay() {
     });
     const result = await response.json();
     resetForm();
-    setIsLoading(false);
+    setTimeout(() => {
+      setIsLoading(false);
+      navigate('/home');
+    }, 3000)
     if(result.data){
       console.log("Succeeded")
     }
