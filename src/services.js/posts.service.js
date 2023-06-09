@@ -1,6 +1,6 @@
 import axios from './axios'
 export function getPosts() {
-    return fetch('http://localhost:8000/products',{method:'GET'}) 
+    return fetch('https://storeproductsserver.onrender.com/products',{method:'GET'}) 
         .then(res => res.json())
         .then(data => data)
         .catch(err => { console.log(err) })
@@ -22,7 +22,6 @@ export async function updatePost(postToUpdate) {
     } catch (error) {
         console.log(error);
     }
-
 }
 
 export function addPost(newPost) {
@@ -34,7 +33,7 @@ export function addPost(newPost) {
         body: JSON.stringify(newPost),
     };
 
-    return fetch('http://localhost:8000/products', requestOptions)
+    return fetch('https://storeproductsserver.onrender.com/products', requestOptions)
         .then(res => res.json())
         .then(data => data)
         .catch(err => { console.log(err) })
@@ -60,7 +59,7 @@ export function addClient(email, password) {
       });
   }
 export function deletePosts(id) {
-    return fetch(`http://localhost:8000/products/${id}`, { method: 'DELETE' })
+    return fetch(`https://storeproductsserver.onrender.com/products/${id}`, { method: 'DELETE' })
         .then(res => res.json())
         .then(data => data)
         .catch(err => { console.log(err) })
