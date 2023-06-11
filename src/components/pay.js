@@ -32,9 +32,9 @@ function Pay() {
       body: JSON.stringify(data)
     });
     const result = await response.json();
-    resetForm();
     setTimeout(() => {
       setIsLoading(false);
+      resetForm();
       navigate('/home');
     }, 3000)
     if(result.data){

@@ -14,7 +14,7 @@ export default function NavBar() {
         <Button><NavLink to='/home'>Home</NavLink></Button>
         <Button><NavLink to='/register'>Register</NavLink> </Button>
         <Button><NavLink to='/products'>All Products</NavLink></Button>
-        <Button><NavLink to='/addProduct'>Add Products</NavLink></Button>
+        <Button><NavLink to='/addProduct'>Add Product</NavLink></Button>
         <Button><NavLink to='/profile'>change image profile</NavLink></Button>
         <Button><NavLink to='/basket'>Basket</NavLink></Button>
         <Button><NavLink to='/pay'>pay</NavLink></Button>

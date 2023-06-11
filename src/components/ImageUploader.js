@@ -31,7 +31,6 @@ const ImageUploader = (props) => {
         formData.append("image", image);
         try {
             await axios.post(`/api/users/${props.userId}/image`, formData);
-
             setError(null);
         } catch (err) {
             setError(err.response.data);

@@ -7,13 +7,12 @@ import React, { useState, useEffect } from 'react';
 import Loading from './components/Loading'
 function App() {
   const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
-    // Simulate a delay to show the loading spinner
     setTimeout(() => {
       setIsLoading(false);
     }, 2000);
   }, []);
+
   return (
     <ImageProvider>
     <BasketProvider>

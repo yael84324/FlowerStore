@@ -26,7 +26,7 @@ export default function AddProduct() {
     }
 
     function handleSubmit() {
-        navigate('/products')
+        navigate('/home')
     }
     function cancel(){
         navigate('/home')
